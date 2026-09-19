@@ -1,0 +1,254 @@
+/* Quitamos los márgenes que trae el navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Toda la página */
+.App {
+  font-family: Arial, sans-serif;
+  color: #151515;
+}
+
+/* =========================
+   BARRA DE NAVEGACIÓN
+   ========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 60px;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Nombre de la empresa */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Menú */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Cuando pasamos el mouse */
+.menu a:hover {
+  color: #4f7d4f;
+}
+
+
+/* =========================
+   SECCIÓN PRINCIPAL
+   ========================= */
+
+.hero {
+  min-height: 500px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px;
+
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+
+ position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.fade-in {
+  animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 29px;
+  max-width: 650px;
+  margin-bottom: 30px;
+
+  font-weight: bold;
+
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+button {
+  border: none;
+  padding: 14px 28px;
+
+  background-color: #4f7d4f;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #3d633d;
+}
+
+
+/* =========================
+   SECCIONES
+   ========================= */
+
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+#nosotros {
+  background: linear-gradient(135deg, #dcebd8, #7fa878);
+}
+
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+.section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SERVICIOS
+   ========================= */
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  margin-top: 40px;
+}
+
+.service {
+  width: 280px;
+  padding: 30px;
+
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+}
+
+.service h3 {
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   CONTACTO
+   ========================= */
+
+.contact {
+  background-color: #f3f3f3;
+}
+
+
+.hero h1,
+.hero p,
+.hero button {
+  position: relative;
+  z-index: 1;
+}
+
+.formulario {
+  margin: 10px auto;
+  padding: 50px;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 40px;
+
+
+   display: flex;
+   flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.formulario input {
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 50px;
+}
+
+.formulario button{
+
+  padding: 20px;
+  border: 10px solid green;
+  margin-top: 10px;
+}
+
+.formulario {
+  background-color: rgba(61, 131, 29, 0.564);
+}
+
+
+
+
+
+
+
+
