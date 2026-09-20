@@ -2,10 +2,21 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 
-import imagen1 from './assets/inicio_img1.jpg';
-import imagen2 from './assets/inicio_img2.jpg';
 
-const imagenes = [imagen1, imagen2];
+import imagen3 from './assets/estud1.avif';
+import imagen4 from './assets/mesadetrabajo.jpg';
+import { FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import {
+  FaShieldAlt,
+  FaCalculator,
+  FaUsers
+} from "react-icons/fa";
+import { FaFileSignature } from "react-icons/fa";
+
+
+
+const imagenes = [ imagen3, imagen4];
 
 function App() {
 
@@ -29,7 +40,7 @@ function App() {
   useEffect(() => {
   const intervalo = setInterval(() => {
     setImagenActual((actual) => (actual + 1) % imagenes.length);
-  }, 10000);
+  }, 6000);
 
   return () => clearInterval(intervalo);
   }, []);
@@ -43,7 +54,7 @@ function App() {
       {/* Barra de navegación */}
       <nav className="navbar">
         <div className="logo">
-          PAISAJISMO PREMIUMz
+          Estudio Integral de Contabilidad, Gestión y Seguros
         </div>
 
         <div className="menu">
@@ -52,6 +63,16 @@ function App() {
           <a href="#servicios">Servicios</a>
           <a href="#contacto">Contacto</a>
         </div>
+
+          <a
+            href="https://wa.me/549352293372"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp"
+          >
+            WhatsApp
+          </a>
+
       </nav>
 
       {/* Página principal */}
@@ -68,11 +89,14 @@ function App() {
     />
     <div className="hero-content">
 
-    <h1>PAISAJISMO PREMIUM</h1>
+    <h1>Asesoramiento Integral Contable y de Seguros</h1>
 
     <p>
-      Diseñamos y transformamos espacios verdes
-      para crear ambientes únicos.
+      Acompañamos a empresas, comercios, profesionales y emprendedores con soluciones contables, impositivas, financieras y de seguros.
+
+      Contabilidad · Impuestos · Gestión · Seguros
+
+     Encontrá la solución que tu negocio necesita.
     </p>
 
     <button>CONSULTANOS</button>
@@ -89,9 +113,11 @@ function App() {
           <h2>Quiénes somoss</h2>
 
           <p>
-            Creamos proyectos de paisajismo pensados para
-            transformar jardines y espacios exteriores.
+            Te acompañamos de forma integral, acompañando tu crecimiento y resolviendo tus necesidade con compromiso y seriedad.  
+            Vos te ocupás de tu negocio y nosotros de la gestión diaria
+
           </p>
+
         </section>
 
         {/* Servicios */}
@@ -101,27 +127,55 @@ function App() {
           <div className="services">
 
             <div className="service">
-              <h3>Diseño de jardines</h3>
-              <p>
-                Diseñamos espacios verdes adaptados a cada necesidad.
-              </p>
-            </div>
+              <FaShieldAlt className="service-icon" />
 
-            <div className="service">
-              <h3>Mantenimiento</h3>
-              <p>
-                Cuidamos y mantenemos jardines durante todo el año.
-              </p>
-            </div>
+              <h3>Seguros</h3>
 
-            <div className="service">
-              <h3>Proyectos</h3>
               <p>
-                Desarrollamos proyectos completos de paisajismo.
-              </p>
-            </div>
-
+                Te asesoramos para encontrar coberturas
+                adecuadas a tus necesidades.
+               </p>
           </div>
+
+
+              <div className="service">
+                <FaCalculator className="service-icon" />
+
+                <h3>Balances</h3>
+
+                <p>
+                  Elaboramos balances contables y brindamos
+                  información para la toma de decisiones.
+                </p>
+              </div>
+
+
+              <div className="service">
+                <FaUsers className="service-icon" />
+
+                <h3>Liquidación de sueldos</h3>
+
+                <p>
+                  Gestionamos la liquidación de haberes y las
+                  obligaciones laborales correspondientes.
+                </p>
+              </div>
+
+          <div className="service">
+            <FaFileSignature className="service-icon" />
+
+            <h3>Documentación formal</h3>
+
+            <p>
+              Elaboración de contratos, actas, notas y otros
+              documentos administrativos.
+            </p>
+          </div>
+
+
+</div>
+
+
         </section>
 
         {/* Contacto */}
@@ -129,7 +183,7 @@ function App() {
           <h2>Contacto</h2>
 
           <p>
-            ¿Queres un jardín soñado? Contactanos.
+            Solicita asesoramiento. Contactanos.
           </p>
 
 
@@ -218,6 +272,12 @@ function App() {
                 onChange={(event) => setFechaNacimiento(event.target.value)}
                 
                 />
+                <label htmlFor="consulta">Consulta</label>
+                  <textarea
+                    placeholder="Escribí tu consulta o solicitud"
+                    rows="6"
+                  ></textarea>
+
 
 
                 <button type="submit">ENVIAR</button>
@@ -229,6 +289,54 @@ function App() {
         </section>
 
       </main>
+
+      <footer className="footer">
+
+          <div className="footer-columna">
+            <h3>Estudio Integral</h3>
+            <p>Contabilidad · Gestión · Seguros</p>
+            <p>Productor seguros: Mat 87-702</p>
+
+
+          </div>
+
+          <div className="footer-columna">
+            <h3>Contacto</h3>
+            <p>WhatsApp</p>
+            <p>Email</p>
+          </div>
+
+          <div className="footer-columna">
+            <h3>Redes</h3>
+            <p>Instagram:
+
+
+            </p>
+            <p>Facebook</p>
+            
+            <p>
+            <a
+              href="https://www.linkedin.com/in/adriana-beatr%C3%ADz-marin-213a55122/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin size={25} />
+            </a>
+            </p>
+
+
+          </div>
+
+      </footer>
+
+     <a
+        href="https://wa.me/5493512293372"
+        className="whatsapp-flotante"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaWhatsapp />
+    </a>     
 
     </div>
   );
