@@ -13,10 +13,10 @@ import {
   FaUsers
 } from "react-icons/fa";
 import { FaFileSignature } from "react-icons/fa";
-
-
+import Novedades from "./components/Novedades";
 
 const imagenes = [ imagen3, imagen4];
+
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
 
   const [apellido, setApellido] = useState("");
 
-  const [fechaNacimiento, setFechaNacimiento] = useState("");
+  const [consulta, setConsulta] = useState("");
 
 
   useEffect(() => {
@@ -174,7 +174,8 @@ function App() {
 
 
 </div>
-
+          {/* Novedades */}
+        <Novedades />
 
         </section>
 
@@ -202,7 +203,7 @@ function App() {
                 dni: dni,
                 apellido: apellido,
                 nombre: nombre,
-                fechaNacimiento: fechaNacimiento
+                consulta: consulta
                 };
 
                 console.log(datos);
@@ -220,7 +221,7 @@ function App() {
                 setDni("");
                 setApellido("");
                 setNombre("");
-                setFechaNacimiento("");
+                setConsulta("");
                 });
                 
                 
@@ -247,8 +248,13 @@ function App() {
                 <input 
                 type="text"
                 value={dni} 
-                onChange={ (event)=> setDni(event.target.value)}
-                 
+                onChange={(event) => {
+                const valor = event.target.value;
+
+                if (/^\d*$/.test(valor)) {
+                setDni(valor);
+                }
+                }}
                 
                 />
 
@@ -265,15 +271,13 @@ function App() {
                 onChange={(event)=> setNombre(event.target.value)}
                 />
 
-                <label>Fecha de nacimiento</label>
-                <input 
-                type="date"
-                value={fechaNacimiento}
-                onChange={(event) => setFechaNacimiento(event.target.value)}
-                
-                />
                 <label htmlFor="consulta">Consulta</label>
                   <textarea
+                    name="consulta1"
+                    id="consulta1"
+
+                    value={consulta}
+                    onChange={(e) => setConsulta(e.target.value)}
                     placeholder="Escribí tu consulta o solicitud"
                     rows="6"
                   ></textarea>
