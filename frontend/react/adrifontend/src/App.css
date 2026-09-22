@@ -510,10 +510,15 @@ button:hover {
 }
 
 .novedad-boton {
-  background-color: #163a5f !important;
+  background-color: #3f7898!important;
   border: none;
   border-radius: 8px;
   transition: background-color 0.3s;
+  display: inline-block;
+  color: white;
+  padding: 10px 18px;
+
+
 }
 
 .novedad-boton:hover {

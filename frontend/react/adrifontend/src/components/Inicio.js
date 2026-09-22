@@ -1,4 +1,3 @@
-
 import "../App.css";
 import { useState, useEffect } from "react";
 
@@ -12,6 +11,7 @@ import { FaFileSignature } from "react-icons/fa";
 
 import Novedades from "./Novedades";
 
+import NoticiasManual from "./NoticiasManual";
 
 const imagenes = [imagen3, imagen4];
 
@@ -40,12 +40,11 @@ function Inicio() {
     return () => clearInterval(intervalo);
   }, []);
 
-
   return (
     <div className="App">
+      <h1>PRUEBA INICIO</h1>
 
-      
-
+      <Novedades />
 
       {/* Barra de navegación */}
       <nav className="navbar">
@@ -154,13 +153,10 @@ function Inicio() {
               </p>
             </div>
           </div>
-
-
-          
         </section>
-          {/* Novedades */}
-          
-          <Novedades />
+        {/* Novedades */}
+
+        <NoticiasManual />
         {/* Contacto */}
         <section id="contacto" className="section contact">
           <h2>Contacto</h2>
@@ -294,7 +290,4 @@ function Inicio() {
   );
 }
 
-
 export default Inicio;
-
-

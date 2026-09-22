@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: admarin333333/estudio-contable
+
+media_folder: "public/images"
+collections:
+  - name: novedades
+    label: Novedades
+    folder: "content/novedades"
+    create: true
+    #guardad la novedad con que nombre abreviado ej monot-2026
+    slug: "{{slug}}"
+    format: frontmatter
+    extension: md
+
+    fields:
+      - name: titulo
+        label: Título
+        widget: string
+
+      - name: fecha
+        label: Fecha
+        widget: datetime
+
+      - name: texto
+        label: Texto breve
+        widget: string
+
+      - name: contenido
+        label: Contenido
+        widget: markdown
+
+      - name: imagen
+        label: Imagen
+        widget: image
