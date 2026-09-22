@@ -498,7 +498,6 @@ button:hover {
   padding: 10px;
   transition: transform 0.3s;
   height: 100%;
-
 }
 
 .novedad-card:hover {
@@ -528,26 +527,23 @@ button:hover {
 }
 .novedad-fecha {
   font-size: 14px;
-  color: #6C757D;
+  color: #6c757d;
   margin-bottom: 15px;
   font-style: italic;
-
 }
 
 .novedad-articulo {
-  background-color: #F4F6F8;
+  background-color: #f4f6f8;
   padding: 30px;
   border-radius: 12px;
   margin-bottom: 30px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
-
 .novedad-articulo p:first-of-type {
-  color: #6C757D;
+  color: #6c757d;
   font-size: 14px;
   font-style: italic;
   margin-bottom: 20px;
@@ -563,4 +559,135 @@ button:hover {
   font-size: 17px;
   line-height: 1.7;
   margin-top: 20px;
+}
+
+.novedades {
+  background-color: #f4f6f8;
+  padding: 50px 20px;
+  border-top: 1px solid #e2e8ed;
+}
+
+#servicios {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #dde3e8;
+}
+#nosotros {
+  border-bottom: 1px solid #DDE3E8;
+  padding-bottom: 60px;
+}
+/* =========================
+   DETALLE DE NOVEDAD
+   ========================= */
+
+.detalle-novedad {
+  min-height: 100vh;
+  padding: 70px 8%;
+  background: #f4f6f8;
+}
+
+.nota {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Categoría */
+
+.nota-categoria {
+  color: #2a6f97;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+/* Título */
+
+.nota h1 {
+  color: #163a5f;
+  font-size: 48px;
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+
+/* Fecha */
+
+.nota-fecha {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 45px;
+}
+
+/* Subtítulo */
+
+.nota h2 {
+  color: #163a5f;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Texto */
+
+.nota p {
+  color: #333;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 850px;
+  margin-bottom: 20px;
+}
+
+/* Tabla */
+
+.tabla-monotributo {
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+}
+
+/* Botón ARCA */
+
+.boton-arca {
+  display: inline-block;
+  background-color: #163a5f;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 40px;
+  transition: background-color 0.3s;
+}
+
+.boton-arca:hover {
+  background-color: #2a6f97;
+}
+
+/* Consulta */
+
+.nota-final {
+  margin-top: 35px;
+}
+
+/* Botón contacto */
+
+.boton-contacto {
+  display: inline-block;
+  background-color: #2a6f97;
+  color: white;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.boton-contacto:hover {
+  background-color: #163a5f;
+}
+
+
+.nota-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
 }
