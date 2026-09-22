@@ -18,7 +18,7 @@ const imagenes = [imagen3, imagen4];
 function Inicio() {
   const [imagenActual, setImagenActual] = useState(0);
 
-  const [fade, setFade] = useState(true);
+  const [fade] = useState(true);
 
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
