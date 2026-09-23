@@ -1,9 +1,5 @@
-[build]
-  base = "frontend/react/adrifontend"
-  command = "npm run build"
-  publish = "build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  [build]
+  base = "frontend/react/adrifontend"
+  publish = "build"
+  command = "npm run build"
