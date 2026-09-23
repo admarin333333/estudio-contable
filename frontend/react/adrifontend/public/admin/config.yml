@@ -3,13 +3,13 @@ backend:
   repo: admarin333333/estudio-contable
   branch: main
 
-media_folder: "frontend/react/adrifontend/public/images"
+media_folder: "public/images"
 public_folder: "/images"
 
 collections:
   - name: novedades
     label: Novedades
-    folder: "frontend/react/adrifontend/content/novedades"
+    folder: "content/novedades"
     create: true
     slug: "{{slug}}"
     format: frontmatter
