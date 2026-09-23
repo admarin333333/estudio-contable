@@ -1,14 +1,16 @@
 backend:
   name: github
   repo: admarin333333/estudio-contable
+  branch: main
 
-media_folder: "public/images"
+media_folder: "frontend/react/adrifontend/public/images"
+public_folder: "/images"
+
 collections:
   - name: novedades
     label: Novedades
-    folder: "content/novedades"
+    folder: "frontend/react/adrifontend/content/novedades"
     create: true
-    #guardad la novedad con que nombre abreviado ej monot-2026
     slug: "{{slug}}"
     format: frontmatter
     extension: md
@@ -17,19 +19,15 @@ collections:
       - name: titulo
         label: Título
         widget: string
-
       - name: fecha
         label: Fecha
         widget: datetime
-
       - name: texto
         label: Texto breve
         widget: string
-
       - name: contenido
         label: Contenido
         widget: markdown
-
       - name: imagen
         label: Imagen
         widget: image
